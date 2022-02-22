@@ -30,7 +30,7 @@ kalibr_calibrate_cameras --bag /foo/sequence.bag --target /foo/april_6x6_80x80cm
 Pull the patch version
 
 ```sh
-docker run -v ~/foo:/foo -it adujardin/ros-kalibr:patch
+docker run -v ~/foo:/foo -it adujardin/ros-kalibr:patch1
 ```
 
 Then refer to the official wiki https://github.com/ethz-asl/kalibr/wiki/calibration-targets
