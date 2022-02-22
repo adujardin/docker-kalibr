@@ -17,6 +17,7 @@ RUN apt-get update && apt-get install -y \
 	python-scipy \
 	python-git \
 	python-pip \
+	python-pyx \
 	libtbb-dev \
 	libblas-dev \
 	liblapack-dev \
@@ -35,7 +36,7 @@ RUN 	mkdir -p $KALIBR_WORKSPACE/src &&\
 	catkin config --cmake-args -DCMAKE_BUILD_TYPE=Release
 
 RUN 	cd $KALIBR_WORKSPACE/src &&\
-	git clone https://github.com/ethz-asl/Kalibr.git
+	git clone https://github.com/adujardin/Kalibr.git
 
 RUN	cd $KALIBR_WORKSPACE &&\
 	catkin build -DCMAKE_BUILD_TYPE=Release -j24
