@@ -1,4 +1,4 @@
-# Docker ROS Kalibr
+# Docker Kalibr
 
 Docker image to run Kalibr.
 
@@ -56,6 +56,7 @@ kalibr_create_target_pdf --type apriltag --nx 6 --ny 6 --tsize 0.088  --tspace 0
 cp target.pdf /foo/apriltag_target.pdf
 ```
 
+A pre-generated target can be found [here](https://github.com/adujardin/docker-ros-kalibr/blob/master/data/april_6x6_80x80cm.pdf)
 
 Corresponding to the following config `april_6x6_80x80cm.yaml` :
 
