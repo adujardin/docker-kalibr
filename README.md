@@ -19,10 +19,19 @@ sudo docker run -v ~/foo:/foo -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-un
 
 ### Calibration Usage
 
-Example of calibration command :
+Input format: https://github.com/ethz-asl/kalibr/wiki/bag-format
+
+
+Example of calibration command for the cameras:
 
 ```sh
 kalibr_calibrate_cameras --bag /foo/sequence.bag --target /foo/april_6x6_80x80cm.yaml --models 'pinhole-radtan' 'pinhole-radtan' --topics /cam0/image_raw /cam1/image_raw --dont-show-report
+```
+
+Then the IMU:
+
+```sh
+kalibr_calibrate_imu_camera --target /foo/april_6x6_80x80cm.yaml --cam camchain-sequence.yaml --imu /foo/imu.yaml --bag /foo/sequence.bag --dont-show-report
 ```
 
 ### Generate targets
