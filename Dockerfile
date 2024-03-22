@@ -7,6 +7,7 @@ RUN apt-get update && apt-get install -y \
 	libboost-all-dev \
 	doxygen \
 	libopencv-dev \
+	libsuitesparse-dev \
 	ros-kinetic-vision-opencv \
 	ros-kinetic-image-transport-plugins \
 	ros-kinetic-cmake-modules \
@@ -25,7 +26,7 @@ RUN apt-get update && apt-get install -y \
 	wget \
 	autoconf automake 
 
-RUN python -m pip install --upgrade pip; python -m pip install python-igraph --upgrade
+RUN python -m pip install --upgrade "pip < 20.0"; python -m pip install python-igraph==0.8.3
 ENV KALIBR_WORKSPACE /kalibr_workspace
 
 RUN 	mkdir -p $KALIBR_WORKSPACE/src &&\
